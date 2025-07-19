@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditz - Zdravotní služby</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Pozadí s obrázkem -->
+    <div class="background-image"></div>
+    <div class="overlay"></div>
+
+    <!-- Navigační menu -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="nav-btn" onclick="showModal('home')">Domů</button>
+            <button class="nav-btn" onclick="showModal('services')">Služby</button>
+            <button class="nav-btn" onclick="showModal('about')">O nás</button>
+            <button class="nav-btn" onclick="showModal('contact')">Kontakt</button>
+        </div>
+    </nav>
+
+    <!-- Hlavní obsah -->
+    <main class="main-content">
+        <!-- Hlavní akční tlačítka -->
+        <div class="hero-section">
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="showModal('appointment')">
+                    📅 Objednat se
+                </button>
+                <button class="primary-btn emergency" onclick="showModal('emergency')">
+                    🚨 Pohotovost
+                </button>
+                <button class="primary-btn" onclick="showModal('results')">
+                    📋 Výsledky vyšetření
+                </button>
+            </div>
+        </div>
+
+        <!-- Informační sekce -->
+        <div class="info-section">
+            <button class="info-btn" onclick="showModal('info')">
+                ℹ️ Více informací
+            </button>
+            <button class="info-btn" onclick="showModal('location')">
+                📍 Najít ordinaci
+            </button>
+        </div>
+    </main>
+
+    <!-- Kontaktní tlačítka -->
+    <div class="contact-buttons">
+        <a href="tel:+420123456789" class="contact-btn phone">
+            📞
+        </a>
+        <a href="mailto:info@meditz.cz" class="contact-btn email">
+            ✉️
+        </a>
+    </div>
+
+    <!-- Modální okna -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
